@@ -1,0 +1,20 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__playwright",
+      "Bash(node -e \"const { chromium } = require\\('playwright'\\); \\(async \\(\\) => { const browser = await chromium.launch\\({ headless: false }\\); const page = await browser.newPage\\(\\); await page.goto\\('http://localhost:3000'\\); await page.waitForLoadState\\('networkidle'\\); const title = await page.title\\(\\); console.log\\('Title:', title\\); const screenshot = 'C:/Temp/screenshot.png'; await page.screenshot\\({ path: screenshot }\\); console.log\\('Screenshot saved to', screenshot\\); }\\)\\(\\).catch\\(e => console.error\\(e\\)\\);\")",
+      "PowerShell(Start-Process \"http://localhost:3000\")",
+      "Bash(curl *)",
+      "Bash(npm list *)",
+      "Bash(npx playwright *)",
+      "Bash(npm install *)",
+      "Bash('textarea')",
+      "Bash(node -e ' *)",
+      "Bash(Start-Process \"http://localhost:3000\")",
+      "Bash(echo \"Exit: $?\")",
+      "Read(//tmp/**)",
+      "Bash(node -e \"require\\('playwright'\\)\")",
+      "Bash(node scripts/capture.js)"
+    ]
+  }
+}
